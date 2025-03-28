@@ -231,7 +231,7 @@ public class SingleThreadedExample
         using var myStem = new SingleThreadedMyStem();
         myStem.Initialize(); // Initialize the MyStem process
 
-        string textToAnalyze = "This is a simple example text for analysis.";
+        string textToAnalyze = "Это простой пример текста для анализа.";
         try
         {
             string result = myStem.Analysis(textToAnalyze);
@@ -270,8 +270,8 @@ public class MultiThreadedExample
         using var myStem = new MultiThreadedMyStem();
         myStem.Initialize(); // Initialize the MyStem process
 
-        string textToAnalyze1 = "The first text for parallel analysis.";
-        string textToAnalyze2 = "The second text that will be processed simultaneously.";
+        string textToAnalyze1 = "Первый текст для параллельного анализа.";
+        string textToAnalyze2 = "Второй текст, который будет обработан одновременно.";
 
         var task1 = Task.Run(() => myStem.MultiAnalysis(textToAnalyze1));
         var task2 = Task.Run(() => myStem.MultiAnalysis(textToAnalyze2));
@@ -323,7 +323,7 @@ public class OptionsExample
         using var myStem = new SingleThreadedMyStem(options);
         myStem.Initialize(); // Initialize the MyStem process
 
-        string textToAnalyze = "Example text with settings.";
+        string textToAnalyze = "Пример текста с настройками.";
         try
         {
             string result = myStem.Analysis(textToAnalyze);
